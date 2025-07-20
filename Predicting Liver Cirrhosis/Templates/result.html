@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prediction Result</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <style>
+      body {
+        background-image: url('{{ url_for("static", filename="bg1.jpg") }}');
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        color: white;
+        text-align: center;
+        padding-top: 100px;
+      }
+      .result-container {
+        background-color: rgba(0, 0, 0, 0.6);
+        margin: auto;
+        padding: 40px;
+        width: 50%;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+      }
+      h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+        color: #ffcc00;
+      }
+      p {
+        font-size: 24px;
+        color: #00ff99;
+      }
+      a {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: #0066cc;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+      }
+      a:hover {
+        background: #004499;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="result-container">
+      <h2>Prediction Result</h2>
+      <p>{{ result }}</p>
+      <a href="/">← Back to Home</a>
+    </div>
+  </body>
+</html>
